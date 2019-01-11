@@ -3888,7 +3888,7 @@ pub struct MarkPropDefWithCondition {
     ///
     /// __Default value:__ If undefined, default [legend
     /// properties](https://vega.github.io/vega-lite/docs/legend.html) are applied.
-    #[serde(skip_serializing_if = "Option::is_none")]
+    // #[serde(skip_serializing_if = "Option::is_none")] /// XXX Must be kept deactivated in order to ensure we are able to remove legend
     pub legend: Option<Legend>,
     /// An object defining properties of the channel's scale, which is the function that
     /// transforms values in the data domain (numbers, dates, strings, etc) to visual values
